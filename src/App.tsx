@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { FateChart } from "./components/FateChart/FateChart";
+import { EventFocus } from "./components/EventFocus/EventFocus";
+import { Actions } from "./components/Actions/Actions";
+import { Phenomena } from "./components/Phenomena/Phenomena";
+import { FateChartDescription } from "./components/FateChart/FateChartDescription";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="root">
+        <div
+          style={{
+            display: "flex",
+            gap: "2rem",
+            alignItems: "flex-start",
+            flexWrap: "wrap",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <FateChart />
+          <FateChartDescription />
+        </div>
+
+        <EventFocus />
+        <Actions />
+        <Phenomena />
+      </div>
     </div>
   );
 }
